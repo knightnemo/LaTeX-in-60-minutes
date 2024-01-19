@@ -11,7 +11,7 @@
     * 2.1 Diverse Font Styles 
     * 2.2 Colorful Outputs
     * 2.3 Font Size
-* Enumerate & Itemize 2
+* Enumerate & Itemize
     * 3.1 Paragraph indent 
     * 3.2 Enumerate 
     * 3.3 Itemize 

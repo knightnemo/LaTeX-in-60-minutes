@@ -1,0 +1,607 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{epigraph}
+\usepackage{amssymb}%这个包引入特殊字符
+\usepackage{amsmath}%这个包引入矩阵etc.
+\begin{document}
+
+\title{My First \LaTeX document
+\\aka. \\A Beginner's Guide to \LaTeX}
+\author{KnightNemo@THSS}
+\date{\today}
+\maketitle
+\newpage
+
+\definecolor{mypurple}{RGB}{102,0,153}
+
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+
+\begin{quotation}
+    \centering {\huge Welcome to \LaTeX.} 
+\end{quotation}
+\epigraph{ Science is what we understand well enough to explain to a computer, Art is all the rest. }
+{\textit{Donald Knuth}}
+
+\section{Introduction}
+    This is the Introduction.
+
+    \LaTeX is a widely-used software system for typesetting documents.
+    blah blah blah\dots
+    In short, it is an awesome way to
+    write well-structured and fully-in-control documents.
+
+    Anyway, as you have came this far so as to discover this doc,
+    I may as well cut out the piffle. 
+    So, Let's plunge right in!
+
+\section{Font-Related}
+
+    \subsection{Diverse Font Styles}
+    \label{sec1}
+    There are a variety of text styles in \LaTeX: 
+
+        \textit{words in italics}
+
+        \textsl{words slanted}
+
+        \textsc{words in smallcaps}
+
+        \textbf{words in bold}
+
+        \texttt{words in teletype}
+
+        \textsf{sans serif words}
+
+        \textrm{roman words}
+
+        \underline{underlined words}
+
+
+    \subsection{Colorful Outputs}
+    This part demonstrates the powerful capacities of \LaTeX to output colors. 
+    Note that this only happens after using \texttt{usepackage\{color\}} 
+
+    {\color{red}flame} 
+
+    {\color{blue}water} 
+
+    \colorbox{black}{\color{white}background color} 
+
+    \colorbox{yellow}{\color{magenta}Lakers suck} 
+
+    \subsection{Font Size}
+    normal size words
+
+    \noindent{\tiny tiny words}
+
+    \noindent{\scriptsize scriptsize words}
+
+    \noindent{\footnotesize footnotesize words}
+
+    \noindent{\small small words}
+
+    \noindent{\large large words}
+
+    \noindent{\Large Large words}
+
+    \noindent{\LARGE LARGE words}
+
+    \noindent{\huge huge words}
+
+\section{Enumerate \& Itemize}
+    \subsection{Paragraph indent}
+    \LaTeX 's default setting is that
+    at the start of the first paragraph in 
+    every section, there would be no indent.
+    Every other paragraph aside from those ones would have 
+    indent as default. 
+
+    If you don't want any indent in a specific paragraph,
+    adding the command \texttt{$\backslash$noindent} before 
+    the intended paragraph would help.
+
+    If you want all of your paragraphs to be of noindent
+    use this command:
+    
+    \texttt{$\backslash$setlength\{$\backslash$parindent\}\{0pt\}}
+
+    somewhere in the .tex file 
+    and all the paragraphs following this cmd would have no indent
+    \subsection{Enumerate}
+    LaTeX Supports two kinds of Lists:
+
+    A Sorted List(enumerate) and An Unsorted List(itemize)
+
+    The elements in the list can be defined as $\backslash$item and Lists can have Sublists 
+        \begin{enumerate}
+        \item First thing
+        \item Second thing
+        \begin{itemize}
+        \item A sub-thing
+        \item Another sub-thing
+        \end{itemize}
+        \item Third thing
+        \end{enumerate}
+    We could use [parameter] to change the representation
+    of items in an Unsorted Lists
+    For instance,$\backslash$item[-] will use a slash as the 
+    new representation
+    You could even use a Word for representation,e.g. $\backslash$item[One]
+        \begin{itemize}
+        \item[-] First thing
+        \item[+] Second thing
+        \begin{itemize}
+        \item[aaa] A sub-thing
+        \item[bbb] Another sub-thing
+        \end{itemize}
+        \item[Q] Third thing
+        \end{itemize}
+
+
+    \subsection{Itemize}
+\section{Special Symbols}
+\subsection{Spacing and Explanatory Notes}
+We use \% to create a explanatory note within the same line
+, all characters after this \% would be ignored
+until the next line begins.
+
+
+For example:
+
+\noindent\textit{
+It is a truth universally acknowledged \% Note comic irony
+\\
+in the very first sentence
+\\
+, that a single man in possession of a good fortune, must
+\\
+be in want of a wife.
+}
+
+would come out as:
+
+\noindent\textit{
+It is a truth universally acknowledged% Note comic irony
+\\
+in the very first sentence
+\\
+, that a single man in possession of a good fortune, must
+\\
+be in want of a wife.}
+
+In LaTeX ,multiple consecutive spaces would be seen as one.
+
+Multiple consecutive empty lines would also be seen as one.
+
+The main objective for using an empty line is to start a new paragraph.
+
+In most circumstances, LaTeX ignores empty lines and other symbols representing spacing,
+Note that two backslashs($\backslash\backslash$)could be used to switch to
+a new line.
+
+If you want to add spaces in your doc, 
+you could use the cmd: \\$\backslash$vaspace\{...\}
+In this way, we can create vertical spaces,where the 
+height of the space can be assigned.
+
+For instance, $\backslash$vspace\{12pt\} will create a space
+,which has the height of a character with 12pt in height
+
+\subsection{Special Symbols}
+
+These are considered Special symbols in \LaTeX:
+
+\textbf{\# \$ \% \^{} \& \_ \{ \} \~{} \textbackslash} 
+
+You could refer to the \LaTeX version of this document to see 
+how these symbols were typed in.
+
+Note that when using symbols: \^{} and \~{} ,
+we need to push a pair of\{\} right after using these symbols.
+Otherwise, they would be infered as hats of characters that follows,
+just like \textbackslash\^{} e would be interpreted as
+\^ e.
+
+Also Note that,backslash can NOT be typed in by simply adding Another
+backslash before it (or else it would do the line wrapping thing)
+The right way is to use the command:
+ \textbackslash textbackslash to substitute it.
+
+Try typing the following sentence just to get a hang of what I mean:
+
+\textit{ Item \#A\textbackslash642 costs \$8 \& is sold
+at a \^{} 10\% profit.}
+\section{Graphs}
+\subsection{Tabular}
+The command \textbackslash tabular is used to typeset tabulars.
+LaTeX's default is that there are no horizontal or vertical 
+seperation lines, so it you need those, you'll have to set it manually.
+LaTeX will automatically assign the width of the tabular based on it's content.
+use:
+
+\textbackslash begin\{tabular\}\{\dots\}
+
+\noindent{to create a tabular;}
+
+The dots should be replaced by the following:
+\begin{itemize}
+    \item \textbf{l} :the column will align to the left
+    \item \textbf{r} :the column will align to the right
+    \item \textbf{c} :the column will align to the center
+    \item \textbf{|} :stands for a vertical line
+\end{itemize}
+
+For instance,\{lll\} will create a tabular of three columns,
+aligned to the left,and no vertical seperation lines.
+
+While \{|l|l|r|\} will generate a three-column tabular,
+with the first two columns aligned to the left
+and the last column aligned to the right,
+there would be vertical seperation lines between columns
+
+Insert the data of the tabular after: \textbackslash begin\{tabular\}\{\dots\}
+\begin{itemize}
+    \item \textbf{\&} :to seperate columns
+    \item \textbf{\textbackslash\textbackslash} :to switch rows
+    \item \textbf{\textbackslash hline} :to insert a 
+    horizontal line that will cross all columns
+    \item \textbf{\textbackslash cline\{1-2\}} :to add a horizontal seperation
+    line between row 1 and row 2
+
+\end{itemize}
+
+Lastly,remember to use \textbackslash end \{tabular\} to end the tabular.
+
+Here are some examples(You may wanna use 
+them to practice using tabulars yourself):
+
+    \begin{tabular}{|l|l|}
+    Apples & Green \\
+    Strawberries & Red \\
+    Orange & Orange\\
+    \end{tabular}
+    \hspace{20pt}
+    \begin{tabular}{r|c}
+    Apples & Green\\
+    \hline 
+    Strawberries & Red \\
+    \cline{1-1}
+    Oranges & Orange \\
+    \end{tabular}
+
+    \vspace{12pt}
+    \begin{tabular}{|r|l|}
+    \hline
+    8 & here's \\
+    \cline{2-2}
+    86 & stuff\\
+    \hline \hline 
+    2008 & now \\
+    \hline 
+    \end{tabular}
+    \hspace{20pt}
+    \begin{tabular}{l|r|r}
+        Item & Quantity & Price(\$) \\
+        \hline
+        Nails & 500 & 0.34 \\
+        Wooden boards & 100 & 4.00 \\
+        Bricks & 240 & 11.50
+    \end{tabular}
+
+    \vspace{20pt}
+    \begin{tabular}{|l|c|c|c|}
+        \hline
+        City & 2006 & 2007 & 2008 \\
+        \hline
+        London & 45789 & 46551 & 51298 \\
+        Berlin & 34549 & 32543 & 29870 \\
+        Paris & 49835 & 51009 & 51970 \\
+        \hline
+    \end{tabular}
+    \subsection{Image}
+    In this subsection, we are going to introduce
+    how to insert graphics in \LaTeX.
+
+    Here, we need to include the \textbf{graphicx} package.
+    Note thtat the picture should be in the format
+    of PDF,PNG,JPEG or GIF. The following code will
+    insert a image named "myimage".
+
+    \textbackslash begin\{figure\}[h]
+
+    \textbackslash centering
+
+    \textbackslash includegraphics[width=1\textbackslash textwidth]\{myimage\}
+
+    \textbackslash caption\{Here is my image\}
+
+    \textbackslash label\{image-myimage\}
+
+    \textbackslash end\{figure\}
+
+    \noindent{[h] represents the paramenter for 
+    the location of the picture,\\
+    h represents placing the image right \textbf{HERE}
+    (if there is enough space)\\
+    There are other options:
+    \\
+    \textbf{t} :represents placing the image on the
+    \textbf{TOP} of the page;\\
+    \textbf{b} :represents placing the image on the
+    \textbf{BOTTOM} of the page;\\
+    \textbf{p} :represents placing the image on a
+    \textbf{NEW PAGE};\\
+    You could also add a ! parameter to assign
+    the picture to a specific place mandatorily.\\
+    (Although in this way, the results might be horrible)}
+
+    \textbackslash centering will place the picture at the center of the page.
+    without this command, LaTeX's default will align the picture to the left.
+    This command is really useful because it will also
+    assigned the title of the picture to the middle.
+
+    The command \textbackslash includegraphics\{...\} 
+    can add the picture into your document automatically.
+    Note that the picture should be placed under the same 
+    directory with the Tex file.
+
+    [width=1\textbackslash textwidth] is an optional parameter,
+    It assigns the width of the picture to be the same with the
+    text. Width can also be set using cm.
+    We could also use [scale=0.5] to shrink the scale of the picture.
+
+    \textbackslash caption\{...\} defines the title(caption) of the picture. 
+    By using that,\\LaTeX will assign a serial number starting with "Figure".
+    Afterwards, you could use  \textbackslash listoffigures to generate a 
+    directory of all the graphs.
+
+    \textbackslash label\{...\} generates a label which you can refer to.
+
+    REMARK: Don't forget to use the command
+    
+    \hspace{20pt}{\textbackslash usepackage\{graphicx\}}
+
+    before using the functions above(LoL).
+
+    Here is an example:
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{demo.png}
+    \caption{Demo Fig.}
+    \label{image-demo image}
+    \end{figure}
+
+\section{Formulas} 
+\subsection{Inserting Formulas}
+There are mainly four ways to insert Formulas
+in LaTeX files.
+\begin{enumerate}
+    \item To create a formula within the same line
+    use \textbf{\$...\$} \\
+    Other ways that exists include:
+    \textbf{
+    \begin{itemize}
+        \item \textbackslash( ... \textbackslash)
+        \item \textbackslash begin\{math\}... \textbackslash end\{math\}
+    \end{itemize}}
+    For example: $B^0(X_0,\delta) = \{x\in \mathbb{R}^n | 0< ||X-X_0||<\delta\}$
+    \item To create a formula that starts off with a new line,
+    use \$\$...\$\$ \\
+    For example: $$\aleph_0 ^ {\aleph_0} = \aleph_1$$
+    \item To create equations with numbers, use:\\
+    \textbf{\textbackslash begin \{equation\} \\ ... \\ \textbackslash end \{equation\}}
+    \\For example:
+    \begin{equation}
+        f(X)=f(X_0)+Jf(X_0)\Delta X + \frac{1}{2!}(\Delta X)^T
+        H_{(X_0+\theta \Delta X)} \Delta X
+    \end{equation}
+    \item If we want to take the equations to a next level:
+    A series of equations, we might want to start using the command:
+    \\\textbf{\textbackslash begin \{eqnarray\} \\ ... \\ \textbackslash end \{eqnarray\}}
+    \\For example:
+    \begin{eqnarray}
+        \int_{A^{'}}^{A^{''}} f(x,y)g(x,y) dx =
+        g(A^{'},y) \int_{A^{'}}^{\xi} f(x,y) dx +
+        g(A^{''},y)\int_{\xi} ^{A^{''}} f(x,y) dx \\
+       I(y)=\int^{\beta (y)}_{\alpha (y)}f(x,y)dx \\
+        \frac{d}{dy}I_{y}=\int_{\alpha(y)}^{\beta(y)}[\frac{\partial f}{\partial y}(x,y)]dx+
+        f(\beta(y),y)\beta^{'}{(y)}-f(\alpha(y),y)\alpha^{'}{(y)}
+    \end{eqnarray}
+    \\We can use \textbf{\& ... \&} between different lines to align them
+    in a way that the dots in different lines are aligned together.
+\end{enumerate}
+\subsection{Special Symbols}
+There are literally loads of Symbols and Letters that would 
+take up dozens of papers just to list them all on the script.
+
+Therefore, it is my firm belief that the best way to learn language
+it by putting it in real-life scenarios and grab what you need 
+and add them to your inventory.
+
+The following is a great website where one could find reference
+to most commonly-used math symbols and such.
+
+http://www.uinio.com/Math/LaTex/
+
+So what we are covering here might just as well be a beginning of
+what a typical -Tex users would get familiar with.
+
+\begin{enumerate}
+    \item \textbackslash frac\{...\}\{...\}
+    \\ This is used to represent fractions
+    \\ For instance: $\frac{x}{\ln x}$
+    \item \textbackslash sqrt[...]\{...\}
+    \\ This is used for squareroots.
+    \\ For example: $\sqrt[3]{\pi}$
+    \item \textbackslash sum\_{}\{\}\^{}\{\}
+     \textbackslash int\_{}\{\}\^{}\{\}
+     \textbackslash prod\_{}\{\}\^{}\{\}
+    \\ These stand for adding discrete stuff up; 
+    adding continous stuff up(to be specific under Riemann's condition);
+    and multiplying discrete stuff up;
+    \\Examples:
+    \begin{eqnarray}
+        \sum_{i=0}^{10}a_{i}\\
+    \int_{0}^{a}\Gamma(t)dt\\
+        \prod_{i=1}^{m}b_{i}
+    \end{eqnarray}
+\end{enumerate}
+
+After a while, you will find yourself more and more used to the Greek
+ alphabet as well as some Heubric characters. 
+
+ \noindent {REMARK: $\xi$ would be printed using the command \textbackslash xi (At least in China
+ This character is usually mispronounced as well as written in very diverse ways lol)}
+
+ However, if you happen to use vscode+ the extension: LaTeX Workshop
+ to edit .tex files, you'll find a bar named {\scriptsize{"SNIPPET VIEW"}} on the 
+ left hand side, where you could possibly find the characters that
+ you might be looking for.
+\section{References}
+\subsection{Intro}
+LaTeX can easily deal with insert reference files and directories.
+In this section, we are going to explore how LaTeX does this
+by storing the reference files in BibTeX. 
+\subsection{BibTeX file format}
+
+BibTeX should include all the files you want to refer to.
+It's suffix is .bib.
+
+The name of the .bib file should be set to be identical with your .tex file.
+
+.bib is a document file in which you may wanna insert your reference articles in this format:
+
+\noindent@ article\{\\
+    Transformer\_{}Model,\\
+    Author = \{A Vaswani,N Shazeer,N Parmar,J Uszkoreit,L Jones,AN Gomez,L Kaiser and I Polosukhin\},\\
+    Title = \{Attention \{I\}s \{A\}ll \{Y\}ou \{N\}eed\},\\
+    Journal = \{arXiv\},\\
+    Volume = \{50\},\\
+    Pages = \{9-19\},\\
+    Year = \{2017\} \\
+\}
+
+With every referenced doc, we should first define it's 
+reference type.
+The demo is in @article type, other types include 
+@book, @incollection for citing chapters in a book,
+@inproceedings to cite conference papers.
+
+After that, we write down a citation key.
+Please make sure each referenced doc uses a different key.
+You can name it whatever you want, but it's better to settle down
+with a certain kind of format.
+
+The next few lines should contain information about the file:
+
+The general format is:
+
+\texttt{Field name = {field contents}}
+
+
+For Capitalized character, use braces to cover them.
+BibTeX will automatically de-Capitalized all characters aside from the first char in the title.
+
+You could write BibTeX files manually, but there are also software that generates these files for you.
+
+\subsection{Inserting a List of references}
+
+Use the following code to generate this list right at the spot 
+in the .tex file.
+
+\textbackslash bibliographystyle\{plain\}
+
+\textbackslash bibliography\{references\}
+
+Write the cited articles in references.bib
+
+\subsection{Reference Annotation}
+
+Use \textbackslash cite\{citationkey\} to generate an annotation at the intended spot.
+If you don't want to insert an annotation in the main body, yet still
+want the reference list to display this citation,
+use the command \textbackslash nocite\{citationkey\}.
+
+To also include the page information of the reference article,use
+
+\textbackslash cite[p. 215]\{citationkay\}.
+
+Use "," to seperate multiple cited articles. For example:
+
+\textbackslash cite\{citation01,citation02,citation03\}
+
+\subsection{Citation Format}
+\begin{enumerate}
+    \item Citing by Numbers\\
+    \LaTeX includes multiple ways to use numbers
+    to cite reference articles:
+    \begin{itemize}
+        \item Plain\\Uses [ num ] as the format.\\
+        For instance,[1].
+        The article's authors will be listed based on the
+        Lead Author's name's dictionary order. Every Author's name
+        would be written down in full name.
+        \item Abbrv\\Same with Plain but the authors' names would be abbreviated.
+        \item Unsrt\\Same with Plain but the order of the cited articles
+        will be based on the sequence the main body cites them.
+        \item Alpha\\Same with Plain but the annotation would be in
+        the format of [NameAbbrev+num].\\For example:[Ker10]
+    \end{itemize}
+    \item Citing by Date
+    
+    If you want to use the format of Name+Date, include the package "natbib".
+
+    It uses the command: \textbackslash citep\{...\} to generate the desired format of citation
+    for instance [Koppe,2010]. Use\textbackslash citet\{...\} to only put the year in the [...] part,
+    For example, Koppe [2010].
+
+    The Natbib package has three formats:
+    
+    \textbf{plainnat,abbrvnat \& unsrtnat}
+    
+    They are identical to \textbf{plain,abbrv \& unsrt}.
+
+    \item Other forms of citation
+   
+    If you plan on using different citation formats, create a .bst file
+    under the same directory, cite this format by using the command:
+
+    \textbackslash bibliographystyle\{...\}
+
+\end{enumerate}
+
+\section{Conclusion}
+Let's wrap it up. In this document, we learned the basics of
+using LaTeX to get the desired output of our files. We focused
+on Font-Related issues; Creating Paragraph and lists(both sorted and unsorted)
+ as well as special symbols,graphs,formulas and references. 
+
+Remember? This is the output of reference by using label which we discussed in the second section:
+
+Referring to \ref{sec1} on page \pageref{sec1}
+
+If you do remember, congrats! If you don't, no worries, just 
+go over it a few more times. As we all know, language is no barrier
+for the sharp-witted, data structures \& algorithms, those are stuff
+ that really takes a bit of talent to learn. Learning \LaTeX? It's just
+ the kind of technical skill that only takes time to excel. Good luck 
+ on your journey with LaTeX as well as other journeys in life. May the Force 
+ be with you.
+
+I'll leave you here with a "itemize" of Further Reading:
+\begin{itemize}
+    \item \textbf{OI-Wiki} https://oi-wiki.org/tools/latex/
+    \item \textbf{The \TeX Book} \textit{Donald Knuth}
+    \item \textbf{\LaTeX Project}  http://www.latex-project.org/
+    \item \textbf{\LaTeX WikiBook}  http://en.wikibooks.org/wiki/LaTeX/ 
+\end{itemize}
+
+Many thanks for OIWiki's LaTeX learning webpage, which I used for reference
+(to a great extent lol), the github repo for this proj is at 
+
+\listoffigures
+\end{document}

@@ -1,0 +1,25 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{}%
+\contentsline {section}{\numberline {2}Font-Related}{1}{}%
+\contentsline {subsection}{\numberline {2.1}Diverse Font Styles}{1}{}%
+\contentsline {subsection}{\numberline {2.2}Colorful Outputs}{1}{}%
+\contentsline {subsection}{\numberline {2.3}Font Size}{2}{}%
+\contentsline {section}{\numberline {3}Enumerate \& Itemize}{2}{}%
+\contentsline {subsection}{\numberline {3.1}Paragraph indent}{2}{}%
+\contentsline {subsection}{\numberline {3.2}Enumerate}{2}{}%
+\contentsline {subsection}{\numberline {3.3}Itemize}{3}{}%
+\contentsline {section}{\numberline {4}Special Symbols}{3}{}%
+\contentsline {subsection}{\numberline {4.1}Spacing and Explanatory Notes}{3}{}%
+\contentsline {subsection}{\numberline {4.2}Special Symbols}{4}{}%
+\contentsline {section}{\numberline {5}Graphs}{4}{}%
+\contentsline {subsection}{\numberline {5.1}Tabular}{4}{}%
+\contentsline {subsection}{\numberline {5.2}Image}{5}{}%
+\contentsline {section}{\numberline {6}Formulas}{7}{}%
+\contentsline {subsection}{\numberline {6.1}Inserting Formulas}{7}{}%
+\contentsline {subsection}{\numberline {6.2}Special Symbols}{8}{}%
+\contentsline {section}{\numberline {7}References}{9}{}%
+\contentsline {subsection}{\numberline {7.1}Intro}{9}{}%
+\contentsline {subsection}{\numberline {7.2}BibTeX file format}{9}{}%
+\contentsline {subsection}{\numberline {7.3}Inserting a List of references}{9}{}%
+\contentsline {subsection}{\numberline {7.4}Reference Annotation}{10}{}%
+\contentsline {subsection}{\numberline {7.5}Citation Format}{10}{}%
+\contentsline {section}{\numberline {8}Conclusion}{11}{}%
